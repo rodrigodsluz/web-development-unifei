@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho 04</title>
+  </head>
+  <body>
+    <div>
+      <h2>Exercício 1</h2>
+      <p>
+        Escreva um script que leia uma string e informe a maior palavra contida
+        na string.
+      </p>
+      <input type="text" id="exercise-1" />
+      <button onclick="findWord()">Search</button>
+      <p id="solution-1"></p>
+    </div>
+
+    <div>
+      <h2>Exercício 2</h2>
+      <p>
+        Escreva um script que leia a data e a hora de seu nascimento e informe a
+        sua idade em anos, dias, horas, minutos e segundos
+      </p>
+      <input type="date" id="exercise-2" />
+
+      <button onclick="calculateDate()">Search</button>
+      <p id="solution-2"></p>
+    </div>
+
+    <div>
+      <h2>Exercício 3</h2>
+      <p>
+        Elabore um script que leia dois números e imprima em uma tabela (gerada
+        dinamicamente) o solutionado das operações aritméticas soma, produto,
+        divisão e resto da divisão (%) entre esses números
+      </p>
+      <input type="text" id="exercise-3-1" />
+
+      <input type="text" id="exercise-3-2" />
+
+      <button onclick="arithmeticOperations()">Search</button>
+
+      <table>
+        <tr>
+          <td id="exercise-3-3"></td>
+          <td id="exercise-3-4"></td>
+        </tr>
+        <tr>
+          <td id="result-3-1"></td>
+          <td id="result-3-2"></td>
+        </tr>
+        <tr>
+          <td id="result-3-3"></td>
+          <td id="result-3-4"></td>
+        </tr>
+        <tr>
+          <td id="result-3-5"></td>
+          <td id="result-3-6"></td>
+        </tr>
+        <tr>
+          <td id="result-3-7"></td>
+          <td id="result-3-8"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h2>Exercício 4</h2>
+      <p>
+        Após o aumento ser calculado, deverá ser informado: o salário antes do
+        reajuste; o percentual de aumento aplicado; o valor do aumento; o novo
+        salário, após o aumento.
+      </p>
+
+      <input type="text" id="exercise-4" />
+
+      <button onclick="calculateSalary()">Search</button>
+
+      <h3 id="result-4"></h3>
+    </div>
+
+    <div>
+      <h2>Exercício 8</h2>
+
+      <p>
+        Leia uma data no formato curto. Ex: 18/03/2019. Em seguida, informe a
+        data no formato longo: 18 de Março de 2019.
+      </p>
+
+      <input type="date" id="exercise-8" />
+
+      <button onclick="newDateFormat()">Update</button>
+
+      <h3 id="result-8"></p>
+
+    </div>
+
+    <div>
+      <h2>
+        Exercício 9
+      </h2>
+      <p>Leia valores numéricos e os coloque num array. A leitura
+        termina quando o valor 0 for digitado. Em seguida, calcule a média dos
+        valores digitados e informe o usuário.</p>
+
+      <input type="button" value="Calcular Média" onclick="calculateMedia()" />
+
+      <h3 id="solution-9"></h3>
+
+    </div>
+
+    <div>
+      <h2>
+        Exercício 10
+      </h2>
+      <p>Leia o nome e a altura de 5 pessoas. Ao final informe o
+        nome da mais alta e sua altura.</p>
+        
+      <div style="display: grid; grid-template-columns: 1fr 1fr; width: 300px">
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-name1"
+          placeholder="Nome da pessoa 1"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-altura-1"
+          placeholder="Altura da pessoa 1"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-name2"
+          placeholder="Nome da pessoa 2"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-altura-2"
+          placeholder="Altura da pessoa 2"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-name3"
+          placeholder="Nome da pessoa 3"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-altura-3"
+          placeholder="Altura da pessoa 3"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-name4"
+          placeholder="Nome da pessoa 4"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-altura-4"
+          placeholder="Altura da pessoa 4"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-name5"
+          placeholder="Nome da pessoa 5"
+        />
+        <input
+          type="text"
+          name="String"
+          id="exercise-10-altura-5"
+          placeholder="Altura da pessoa 5"
+        />
+      </div>
+
+      <button onclick="maiorAltura()">Search</button>
+
+      <h3 id="result-10"></p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
