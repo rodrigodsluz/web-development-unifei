@@ -1,0 +1,20 @@
+.title {
+  width: 10rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  padding: 15px;
+
+  border-collapse: collapse;
+  text-align: center;
+}
+
+button {
+  background: #fff;
+  border: none;
+}
