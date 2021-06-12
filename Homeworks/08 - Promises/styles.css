@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  background-color: lightblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.city-input {
+  width: 450px;
+  height: 50px;
+
+  outline: none;
+
+  border-radius: 10px;
+
+  border: 3px solid purple;
+}
+
+.btn {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+}

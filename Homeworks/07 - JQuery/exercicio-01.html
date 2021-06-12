@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exercicio 1 - Trabalho 07</title>
+  </head>
+
+  <body>
+    <form>
+      <input type="text" />
+
+      <input type="button" value=">>>" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <input type="text" />
+
+      <br />
+
+      <ol>
+       
+      </ol>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        $(":button").on("click", function () {
+          const input = $(":text");
+          for (let item of input) {
+            $("ol").append("<li>"+item.value+"</li>");
+
+            item.value = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

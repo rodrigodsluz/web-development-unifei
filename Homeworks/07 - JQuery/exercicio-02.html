@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exercicio 2 - Trabalho 07</title>
+  </head>
+
+  <body>
+    <div id="formulario" class="panel panel-primary">
+      <div class="panel-heading">Meus feitiços</div>
+
+      <div class="panel-body">
+        Feitiço: <input type="text" spell />
+
+        Nível: <input type="text" level />
+
+        <button type="button" id="novo">Adicionar</button>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table border="1" class="table table-striped" id="tabela">
+            <tr>
+              <th>Feitiço</th>
+
+              <th>Nível</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#novo").click(function () {
+          const spell = $("[spell]").val();
+
+          const level = $("[level]").val();
+
+          $("#tabela").append(
+            "<tr><td>"+spell+"</td><td>"+level+"</td></tr>"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
