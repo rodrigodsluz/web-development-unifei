@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD - MongoDB</title>
+  </head>
+  <body>
+    <h3>Informações</h2>
+      <table border="4">
+        <thead>
+          <tr>
+            <th>Cidade</th>
+            <th>Temperatura</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(values) { %>
+          <tr>
+            <td><%=values.cidade %></td>
+            <td><%=values.temp %></td>
+          </tr>
+          <% })
+        %>
+        </tbody>
+      </table>
+      <br />
+  </body>
+</html>

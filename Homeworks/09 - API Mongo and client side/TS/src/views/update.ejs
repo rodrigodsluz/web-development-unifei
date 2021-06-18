@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD - MongoDB</title>
+  </head>
+  <body>
+  <h2>Atualizar cadastro</h2>
+    <% data.forEach(function(values) { %>
+      <form action="/update/<%= values._id %>" method="POST">
+        <input type="text" value="<%= values.name %>" name="name">
+        <input type="text" value="<%= values.cpf %>" name="cpf">
+        <br />  <br />
+
+        <button type="submit">Atualizar</button>
+      </form>
+    <% })
+    %>
+  </body>
+</html>

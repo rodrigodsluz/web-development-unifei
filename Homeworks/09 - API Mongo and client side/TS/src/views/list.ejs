@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD - MongoDB</title>
+  </head>
+  <body>
+    <h3>Cadastrados</h2>
+      <table border="4">
+        <thead>
+          <tr>
+            <th>Nome</td>
+            <th>CPF</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(values) { %>
+          <tr>
+            <td><%= values.name %></td>
+            <td><%= values.cpf %></td>
+
+            <td>
+              <a href="/update/<%= values._id %>">Atualizar</a> ||
+              <a href="/delete/<%= values._id %>">Remover</a>
+            </td>
+          </tr>
+          <% })
+        %>
+        </tbody>
+      </table>
+      <br />
+    <button><a href="/">Adicionar</a></button>
+  </body>
+</html>
