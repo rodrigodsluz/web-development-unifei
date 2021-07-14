@@ -1,0 +1,38 @@
+<div>
+  <div class="btn-container">
+    <button class="btn" (click)="showNotaFiscal()">Fecha nota</button>
+  </div>
+  <h3 class="tip">
+    Primeiro você precisa adicionar produtos para então poder gerar a nota fiscal
+  </h3>
+
+  <div class="nota-fiscal-container">
+    <app-products></app-products>
+
+    <div class="nota-fiscal-wrapper">
+      <h1>Nota Fiscal</h1>
+
+      <table>
+        <tr>
+          <th class="title">Descrição</th>
+
+          <th class="title">Codigo</th>
+          <th class="title">Quantidade</th>
+          <th class="title">Valor Unitário</th>
+          <th class="title">Desconto</th>
+          <th class="title">Total</th>
+        </tr>
+
+        <tr *ngFor="let product of products" align="center">
+          <td class="info">{{ product.descricao }}</td>
+
+          <td class="info">{{ product.codigo }}</td>
+          <td class="info">{{ product.amount }}</td>
+          <td class="info">R$ {{ product.valorUnitario }}</td>
+          <td class="info">{{ product.desconto }} %</td>
+          <td class="info">R$ {{ product.total }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

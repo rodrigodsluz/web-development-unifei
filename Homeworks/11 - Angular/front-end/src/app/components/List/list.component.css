@@ -1,0 +1,41 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 65px;
+  cursor: pointer;
+}
+
+.nota-fiscal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nota-fiscal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.title {
+  padding: 30px;
+  border: 1px solid black;
+}
+
+.info {
+  border: 1px solid black;
+}
+
+.tip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

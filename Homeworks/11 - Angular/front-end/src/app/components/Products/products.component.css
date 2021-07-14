@@ -1,0 +1,29 @@
+.products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  margin: 20px;
+  width: 229px;
+  padding: 10px;
+}
+
+.btn-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label{
+  margin-right: 5px;
+}
+
+.btn-add {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
