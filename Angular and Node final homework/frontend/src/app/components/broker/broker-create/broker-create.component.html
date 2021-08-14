@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-title>Novo Corretor</mat-card-title>
+    <form>
+        <!-- CRECI Field -->
+        <mat-form-field>
+            <input matInput placeholder="CRECI *" [(ngModel)]="broker.creci" name="creci">
+        </mat-form-field>
+        <!-- Name Field -->
+        <mat-form-field>
+            <input matInput placeholder="Nome *" [(ngModel)]="broker.name" name="name">
+        </mat-form-field>
+        <!-- Type Field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo *</mat-label>
+            <mat-select [(ngModel)]="broker.type" name="type">
+                <mat-option *ngFor="let type of types" [value]="type">
+                    {{ type }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- Salary Field -->
+        <mat-form-field *ngIf="broker.type == 'contratado'">
+            <mat-label>Salário *</mat-label>
+            <input matInput [(ngModel)]="broker.salary" name="salary" type="number" min="1">
+        </mat-form-field>
+        <!-- Percent Field -->
+        <mat-form-field *ngIf="broker.type == 'comissionado'">
+            <mat-label>Comissão *</mat-label>
+            <input matInput [(ngModel)]="broker.percent" name="percent" type="number" min="1" max="3" step="0.01">
+        </mat-form-field>
+        <!-- Admission Date Field -->
+        <mat-form-field *ngIf="broker.type == 'contratado'">
+            <input matInput placeholder="Admissão *" [(ngModel)]="broker.admissionDate" name="admissionDate" type="date">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createBroker()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

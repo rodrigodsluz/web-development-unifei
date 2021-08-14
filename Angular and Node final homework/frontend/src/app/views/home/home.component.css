@@ -1,0 +1,18 @@
+.home .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.home .subtitle {
+    font-size: 1.1rem;
+}
+
+.tela {
+    background-image: url('../../../assets/img/corretor.jpg');
+    height: 73vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}

@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-title>Novo Imóvel</mat-card-title>
+    <form>
+        <!-- Description Field -->
+        <mat-form-field>
+            <input matInput placeholder="Descrição *" [(ngModel)]="immobile.description" name="description">
+        </mat-form-field>
+        <!-- Price Field -->
+        <mat-form-field>
+            <mat-label>Preço *</mat-label>
+            <input matInput [(ngModel)]="immobile.price" name="price" type="number" min="1">
+        </mat-form-field>
+        <!-- Date Field -->
+        <mat-form-field>
+            <input matInput placeholder="Data *" [(ngModel)]="immobile.date" name="date" type="date">
+        </mat-form-field>
+        <!-- Name Seller Field -->
+        <mat-form-field>
+            <input matInput placeholder="Vendedor *" [(ngModel)]="immobile.nameSeller" name="nameSeller">
+        </mat-form-field>
+        <!-- Type Field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo *</mat-label>
+            <mat-select [(ngModel)]="immobile.type" name="type">
+                <mat-option *ngFor="let type of types" [value]="type">
+                    {{ type }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- Image Upload Field -->
+        <mat-label>Imagem (OBS: apenas imagem menores que 1MB serão aceitas)</mat-label>
+        <input type="file" #fileInput id="uploadFile" (change)="uploadFileEvt($event)" name="uploadFile"
+            accept="image/*" />
+        <img [src]="immobile.imgPath" height="200" *ngIf="immobile.imgPath">
+    </form>
+    <button mat-raised-button (click)="createImmobile()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

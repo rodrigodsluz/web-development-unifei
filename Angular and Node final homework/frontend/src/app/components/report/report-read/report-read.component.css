@@ -1,0 +1,55 @@
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+.mat-form-field {
+    margin-right: 30px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.example-container {
+    height: 70vh;
+    overflow: auto;
+}
+
+.edit {
+    margin-right: 10px;
+}
+
+.edit>i {
+    color: #06d6a0;
+}
+
+.delete {
+    margin-right: 10px;
+}
+
+.delete>i {
+    color: #e35e6b;
+}
+
+td:first-child:nth-last-child(7) {
+    width: calc(100%/6);
+}
+
+td:first-child:nth-last-child(8) {
+    width: calc(100%/7);
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-card {
+    margin-bottom: 10px;
+}
+
+.not-found {
+    text-align: center;
+}

@@ -1,0 +1,6 @@
+<h2 mat-dialog-title>{{data.type == 'description' ? 'Descrição' : 'Imagem'}}</h2>
+<mat-dialog-content *ngIf="data.type == 'description'">{{ data.text }}</mat-dialog-content>
+<mat-dialog-content *ngIf="data.type == 'image'"> <img src="{{ data.text }}" /></mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Ok</button>
+</mat-dialog-actions>

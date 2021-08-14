@@ -1,0 +1,20 @@
+<mat-toolbar class="header mat-elevation-z4">
+    <span>
+    </span>
+    <span class="title-group">
+        <a>
+            <i class="material-icons">
+                <!-- {{ icon }} -->
+            </i>
+            {{ title }}
+        </a>
+    </span>
+    <span class="example-spacer"></span>
+    <div class="cadastro">
+        <button mat-icon-button class="example-icon person-icon" [matMenuTriggerFor]="menu">
+            <!-- <mat-icon>login</mat-icon> -->
+        </button>
+        <mat-menu #menu="matMenu">
+        </mat-menu>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,70 @@
+<div class="mat-elevation-z8" class="example-container">
+
+    <table mat-table [dataSource]="brokers" class="mat-elevation-z8">
+
+        <!-- Type Column -->
+        <ng-container matColumnDef="type">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Tipo</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.type}}
+            </td>
+        </ng-container>
+
+        <!-- CRECI Column -->
+        <ng-container matColumnDef="creci">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>CRECI</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.creci}}
+            </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Nome</th>
+            <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+        </ng-container>
+
+        <!-- Salary Column -->
+        <ng-container matColumnDef="salary">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Salário</th>
+            <td mat-cell *matCellDef="let row">{{ row.salary | currency:'BRL':true }}</td>
+        </ng-container>
+
+        <!-- Percent Column -->
+        <ng-container matColumnDef="percent">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Comissão</th>
+            <td mat-cell *matCellDef="let row">{{ row.percent }}</td>
+        </ng-container>
+
+        <!-- Admission Date Type Column -->
+        <ng-container matColumnDef="admissionDate">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Admissão</th>
+            <td mat-cell *matCellDef="let row">{{ row.admissionDate | date: 'dd/MM/yyyy' }}</td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <th style="text-align: center; margin: 1%;" mat-header-cell *matHeaderCellDef>Ações</th>
+            <td mat-cell *matCellDef="let row">
+                <a routerLink="/brokers/update/{{ row._id }}" class="edit">
+                    <i class="material-icons">
+                        edit
+                    </i>
+                </a>
+                <!-- <a routerLink="/brokers/delete/{{ row._id }}" class="delete">
+                    <i class="material-icons">
+                        delete
+                    </i>
+                </a> -->
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td colspan="8" class="mat-cell not-found">Nenhum resultado encontrado</td>
+        </tr>
+    </table>
+</div>

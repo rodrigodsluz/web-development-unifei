@@ -1,0 +1,43 @@
+### SELECT Busca a informação do jogo
+GET  http://localhost:3001/games/ HTTP/1.1
+
+### SELECT Busca jogos usando o filtro de type
+GET  http://localhost:3001/games?type=playstation HTTP/1.1
+
+### SELECT Busca jogos mais avaliados por console
+GET  http://localhost:3001/games/most_rated/xbox HTTP/1.1
+
+### INSERT Registra jogo ((*) Campos obrigatórios)
+POST  http://localhost:3001/games HTTP/1.1
+Content-Type: application/json
+
+{
+    "type": "xbox",
+    "title": "God of War",
+    "summary": "God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio. Iniciada em 2005, a série tornou-se carro-chefe para a marca PlayStation, que consiste em oito jogos em várias plataformas.",
+    "developer": "Santa Mônica",
+    "rating": 1,
+    "genre": "RPG",
+    "user_id": "5fc2961bd4f97c012d861498"
+}
+
+### UPDATE
+PUT  http://localhost:3001/games/:game_id HTTP/1.1
+Content-Type: application/json
+
+{
+    "developer": "CEGA",
+    "genre": "Ação",
+}
+
+### DELETE Remove o jogo
+DELETE  http://localhost:3001/games/:game_id HTTP/1.1
+
+
+### POST Atualiza ou Adiciona a imagem de um jogo
+
+POST http://localhost:3001/games/upload/:game_id
+
+### GET Acessa a arquivos estáticos contidos na pasta /uploads do projeto backend
+
+GET http://localhost:3001/files/:image_name

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  frontend:
+    build: frontend
+    ports:
+      - '4201:4201'
+    volumes:
+      - ./frontend:/frontend
+  
+  backend:
+    build: backend
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./backend:/backend

@@ -1,0 +1,57 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened 
+        fixedInViewport="true" fixedTopGap="0">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home
+                </i>
+                Início
+            </a>
+            <a mat-list-item  routerLink="/immobiles">
+                <i class="material-icons">
+                    person
+                </i>
+                Imóveis
+            </a>
+            <a mat-list-item  routerLink="/brokers">
+                <i class="material-icons">
+                    person
+                </i>
+                Corretores
+            </a>
+            <a mat-list-item  routerLink="/sells">
+                <i class="material-icons">
+                    person
+                </i>
+                Vendas
+            </a>
+            <a mat-list-item  routerLink="/payments">
+                <i class="material-icons">
+                    person
+                </i>
+                Pagamentos
+            </a>
+            <a mat-list-item  routerLink="/reports">
+                <i class="material-icons">
+                    person
+                </i>
+                Relatórios
+            </a>
+        </mat-nav-list>
+        <div class="footer">
+            <div>
+                COM222
+            </div>
+            <div>
+                Desenvolvimento Web
+            </div><br>
+            <div>
+                <b> UNIFEI </b>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

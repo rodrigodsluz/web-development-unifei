@@ -1,0 +1,58 @@
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-with-button {
+    width: 83% !important;
+}
+
+.button-in-title {
+    margin: 0 !important;
+    background-color: #ffffff;
+    color: black !important;
+}
+
+.mat-focused .mat-form-field-label, .mat-form-field-infix {
+    color: #ffffff !important;
+}
+
+.mat-form-field-underline {
+    background-color: #ffffff !important;
+}
+
+.mat-form-field-ripple {
+    background-color: #ffffff !important;
+}
+
+.mat-input-element {
+    caret-color: #ffffff !important;
+}
+
+span:has(:not(.button-in-title)), input {
+    color: #ffffff;
+}
+
+.msg-error {
+    background-color: #ff595e !important;
+}
+
+.msg-success {
+    background-color: #8ac926 !important;
+}
+
+.mat-toolbar.header {
+    padding: 0 16px 0 270px;
+}

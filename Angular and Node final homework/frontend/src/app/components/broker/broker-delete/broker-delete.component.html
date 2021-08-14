@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Excluir Corretor</mat-card-title>
+    <form>
+        <!-- Id Field -->
+        <mat-form-field>
+            <input matInput placeholder="Código *" [(ngModel)]="broker._id" name="id" disabled>
+        </mat-form-field>
+        <!-- CRECI Field -->
+        <mat-form-field>
+            <input matInput placeholder="CRECI *" [(ngModel)]="broker.creci" name="creci" disabled>
+        </mat-form-field>
+        <!-- Type Field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo *</mat-label>
+            <mat-select [(ngModel)]="broker.type" name="type" disabled>
+                <mat-option *ngFor="let type of types" [value]="type">
+                    {{ type }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- Name Field -->
+        <mat-form-field>
+            <input matInput placeholder="Nome *" [(ngModel)]="broker.name" name="name" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteBroker()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

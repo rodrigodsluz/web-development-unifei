@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>Novo Corretor</mat-card-title>
+    <form>
+        <!-- Immobile Field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Imóveis *</mat-label>
+            <mat-select [(ngModel)]="sell.immobile" name="immobile">
+                <mat-option *ngFor="let immobile of immobiles" [value]="immobile">
+                    {{ immobile.description }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- Broker Field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Corretor *</mat-label>
+            <mat-select [(ngModel)]="sell.broker" name="broker">
+                <mat-option *ngFor="let broker of brokers" [value]="broker">
+                    {{ broker.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- Salary Field -->
+        <mat-form-field>
+            <mat-label>Valor *</mat-label>
+            <input matInput [(ngModel)]="sell.value" name="value" type="number" min="1" step="0.01">
+        </mat-form-field>
+        <!-- Buyer Name Field -->
+        <mat-form-field>
+            <mat-label>Comprador *</mat-label>
+            <input matInput [(ngModel)]="sell.buyerName" name="buyerName">
+        </mat-form-field>
+        <!-- Date Field -->
+        <mat-form-field>
+            <input matInput placeholder="Data *" [(ngModel)]="sell.date" name="date" type="date">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createSell()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
